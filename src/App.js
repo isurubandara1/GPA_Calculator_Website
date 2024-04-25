@@ -121,7 +121,7 @@ const App = () => {
             placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, A_plus: e.target.value })}
           />
-          <p className="gpaListText">A </p>
+          <p className="gpaListText">A</p>
           <input
             className="gpaTextInput"
             placeholder="Enter points"
@@ -129,7 +129,7 @@ const App = () => {
           />
         </div>
         <div className="gradeRow">
-          <p className="gpaListText">A- </p>
+          <p className="gpaListText">A-</p>
           <input
             className="gpaTextInput"
             placeholder="Enter points"
