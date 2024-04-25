@@ -1,0 +1,135 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .topicContainer {
+    margin-top: 50px;
+  }
+  
+  .topic {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .firstSentContainer {
+    margin-top: 20px;
+  }
+  
+  .firstSentence {
+    font-size: 18px;
+  }
+  
+  .gpaListcontainer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .gradeRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .gpaListText {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .gpaTextInput {
+    border: none;
+    background-color: #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 50px;
+    text-align: center;
+  }
+  
+  .yearContainer {
+    margin-top: 30px;
+  }
+  
+  .yearText {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .userValueContainer {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .firstTextInput {
+    border: none;
+    background-color: #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 100px;
+    text-align: center;
+  }
+  
+  .scrollViewContent {
+    height: 200px; /* adjust the height as needed */
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .rowContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .inputText {
+    border: none;
+    background-color: #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 100px;
+    text-align: center;
+    margin-right: 10px;
+  }
+  
+  .gradeInput {
+    width: 70px;
+  }
+  
+  .creditInput {
+    width: 30px;
+  }
+  
+  .viewGpaButton {
+    margin-top: 30px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .buttonText {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .gpaText {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
