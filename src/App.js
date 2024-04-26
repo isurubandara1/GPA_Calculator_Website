@@ -10,7 +10,7 @@ const App = () => {
     B: '',
     'B-': '',
     'C+': '',
-    
+
     C: '',
     'C-': '',
     'D+': '',
@@ -105,6 +105,7 @@ const App = () => {
 
   return (
     <div className="container">
+    <div className="container1">
       <div className="topicContainer">
         <h2 className="topic">GPA ESTIMATOR</h2>
       </div>
@@ -245,6 +246,8 @@ const App = () => {
       </button>
 
       <p className="gpaText">Your GPA is {button}</p>
+    </div>
+    <div className="container2">Container 2</div>
     </div>
   );
 };
