@@ -1,11 +1,13 @@
 .container {
   display: flex;
   justify-content: space-between; 
+  flex-direction: row;
 }
 
 .container1 {
   flex: 1; 
   margin-right: 10px; 
+  flex-direction: column;
 }
 
 .container2 {
