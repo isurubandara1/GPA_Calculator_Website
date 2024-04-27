@@ -123,13 +123,11 @@ const App = () => {
           <p className="gpaListText">A+</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, A_plus: e.target.value })}
           />
           <p className="gpaListText">A</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, A: e.target.value })}
           />
         </div>
@@ -137,13 +135,11 @@ const App = () => {
           <p className="gpaListText">A-</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, A_: e.target.value })}
           />
           <p className="gpaListText">B+</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, B_plus: e.target.value })}
           />
         </div>
@@ -151,13 +147,11 @@ const App = () => {
           <p className="gpaListText">B </p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, B: e.target.value })}
           />
           <p className="gpaListText">B-</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, B_: e.target.value })}
           />
         </div>
@@ -165,13 +159,11 @@ const App = () => {
           <p className="gpaListText">C+</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, C_plus: e.target.value })}
           />
           <p className="gpaListText">C </p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, C: e.target.value })}
           />
         </div>
@@ -179,13 +171,11 @@ const App = () => {
           <p className="gpaListText">C- </p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, C_: e.target.value })}
           />
           <p className="gpaListText">D+</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, D_plus: e.target.value })}
           />
         </div>
@@ -193,13 +183,11 @@ const App = () => {
           <p className="gpaListText">D </p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, D: e.target.value })}
           />
           <p className="gpaListText">D-</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, D_: e.target.value })}
           />
         </div>
@@ -207,7 +195,6 @@ const App = () => {
           <p className="gpaListText">E</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, E: e.target.value })}
           />
         </div>
