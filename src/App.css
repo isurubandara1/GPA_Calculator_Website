@@ -1,11 +1,13 @@
 .container {
   display: flex;
   justify-content: space-between; 
+  flex-direction: row;
 }
 
 .container1 {
   flex: 1; 
   margin-right: 10px; 
+  flex-direction: column;
 }
 
 .container2 {
@@ -20,6 +22,7 @@
   .topic {
     font-size: 36px;
     font-weight: bold;
+    text-align: center;
   }
   
   .firstSentContainer {
@@ -28,6 +31,18 @@
   
   .firstSentence {
     font-size: 18px;
+    text-align: center;
+  }
+
+  .gradeTopicContainer{
+    margin-top: 50px;
+  }
+
+  .gradeTopic{
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
   }
   
   .gpaListcontainer {
@@ -41,22 +56,38 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    justify-content: center; 
+    flex-direction: row;
+    padding: 15px;
   }
   
   .gpaListText {
     margin-right: 10px;
+    margin-left: 30px;
     font-size: 18px;
     font-weight: bold;
   }
   
   .gpaTextInput {
-    border: none;
-    background-color: #ccc;
+    background-color: white;
     padding: 5px 10px;
     border-radius: 5px;
+    border-color: #4CAF50;
+    border-width: 3px;
     font-size: 18px;
-    width: 50px;
+    width: 40px;
     text-align: center;
+  }
+
+  .yearTopicContainer{
+    margin-top: 30px;
+  }
+
+  .yearTopic{
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
   }
   
   .yearContainer {

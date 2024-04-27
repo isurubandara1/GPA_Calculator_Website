@@ -115,18 +115,19 @@ const App = () => {
           program
         </p>
       </div>
+      <div className="gradeTopicContainer">
+        <p className='gradeTopic'>1. Add Grade Points According to Grades</p>
+      </div>
       <div className="gpaListcontainer">
         <div className="gradeRow">
           <p className="gpaListText">A+</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, A_plus: e.target.value })}
           />
           <p className="gpaListText">A</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, A: e.target.value })}
           />
         </div>
@@ -134,13 +135,11 @@ const App = () => {
           <p className="gpaListText">A-</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, A_: e.target.value })}
           />
           <p className="gpaListText">B+</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, B_plus: e.target.value })}
           />
         </div>
@@ -148,13 +147,11 @@ const App = () => {
           <p className="gpaListText">B </p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, B: e.target.value })}
           />
           <p className="gpaListText">B-</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, B_: e.target.value })}
           />
         </div>
@@ -162,13 +159,11 @@ const App = () => {
           <p className="gpaListText">C+</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, C_plus: e.target.value })}
           />
           <p className="gpaListText">C </p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, C: e.target.value })}
           />
         </div>
@@ -176,13 +171,11 @@ const App = () => {
           <p className="gpaListText">C- </p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, C_: e.target.value })}
           />
           <p className="gpaListText">D+</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, D_plus: e.target.value })}
           />
         </div>
@@ -190,13 +183,11 @@ const App = () => {
           <p className="gpaListText">D </p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, D: e.target.value })}
           />
           <p className="gpaListText">D-</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, D_: e.target.value })}
           />
         </div>
@@ -204,43 +195,58 @@ const App = () => {
           <p className="gpaListText">E</p>
           <input
             className="gpaTextInput"
-            placeholder="Enter points"
             onChange={(e) => setGradePoints({ ...gradePoints, E: e.target.value })}
           />
         </div>
       </div>
-      <div className="yearContainer">
-        <p className="yearText">For year 1</p>
+      <div className="yearTopicContainer">
+        <p className='yearTopic'>2. Enter number of courses and click OK button for some year</p>
       </div>
-      <div className="userValueContainer">
-        <input
-          className="firstTextInput"
-          placeholder="Enter number of courses"
-          onChange={(e) => handleCountChange("year1", e.target.value)}
-        />
-      </div>
-      <div className="userValueContainer">
-        <div className="scrollViewContent">
-          {textFields.year1?.map((course, index) => (
-            <div key={index} className="rowContainer">
-              <input
-                className="inputText gradeInput"
-                placeholder={`Course ${index + 1} Grade`}
-                onChange={(e) =>
-                  handleGradeChange("year1", index, e.target.value)
-                }
-              />
-              <input
-                className="inputText creditInput"
-                placeholder={`Course ${index + 1} Credit`}
-                onChange={(e) =>
-                  handleCreditChange("year1", index, e.target.value)
-                }
-              />
+      
+      <div>
+      {[1, 2, 3, 4].map(year => (
+        <div key={year}>
+          <div className="yearContainer">
+            <p className="yearText">For year {year}</p>
+          </div>
+          <div className="userValueContainer">
+            <input
+              className="firstTextInput"
+              type="number"
+              placeholder="Enter number of courses"
+              onChange={e => handleCountChange(`year${year}`, e.target.value)}
+            />
+            <div style={{ width: 70 }}>
+              <button
+                onClick={() => handleOkPress(`year${year}`)}
+              >
+                OK
+              </button>
             </div>
-          ))}
+          </div>
+          <div className="userValueContainer">
+            <div className="scrollViewContent">
+              {textFields[`year${year}`]?.map((course, index) => (
+                <div key={index} className="rowContainer">
+                  <input
+                    className="inputText gradeInput"
+                    type="text"
+                    placeholder={`Course ${index + 1} Grade`}
+                    onChange={e => handleGradeChange(`year${year}`, index, e.target.value)}
+                  />
+                  <input
+                    className="inputText creditInput"
+                    type="number"
+                    placeholder={`Course ${index + 1} Credit`}
+                    onChange={e => handleCreditChange(`year${year}`, index, e.target.value)}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
+      ))}
+    </div>
       <button className="viewGpaButton" onClick={viewGpa}>
         <p className="buttonText">View GPA</p>
       </button>
