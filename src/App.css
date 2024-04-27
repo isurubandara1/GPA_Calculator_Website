@@ -1,3 +1,10 @@
+.warningMessage {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
 .container {
   display: flex;
   justify-content: space-between; 
@@ -16,7 +23,7 @@
 }
 
   .topicContainer {
-    margin-top: 50px;
+    margin-top: 10px;
   }
   
   .topic {
@@ -26,7 +33,7 @@
   }
   
   .firstSentContainer {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   
   .firstSentence {
@@ -35,7 +42,7 @@
   }
 
   .gradeTopicContainer{
-    margin-top: 50px;
+    margin-top: 10px;
   }
 
   .gradeTopic{
@@ -58,17 +65,18 @@
     margin-bottom: 10px;
     justify-content: center; 
     flex-direction: row;
-    padding: 15px;
+    padding: 10px;
   }
   
   .gpaListText {
-    margin-right: 10px;
+    margin-right: 20px;
     margin-left: 30px;
     font-size: 18px;
     font-weight: bold;
   }
   
   .gpaTextInput {
+    margin-right: 20px;
     background-color: white;
     padding: 5px 10px;
     border-radius: 5px;
@@ -92,11 +100,13 @@
   
   .yearContainer {
     margin-top: 30px;
+    margin-left: 30px;
   }
   
   .yearText {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight:700;
+    color: gray;
   }
   
   .userValueContainer {
@@ -107,15 +117,36 @@
   }
   
   .firstTextInput {
-    border: none;
-    background-color: #ccc;
+    background-color:white;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 18px;
     width: 100px;
     text-align: center;
+    border-radius: 5px;
+    border-color: #4CAF50;
+    border-width: 2px;
   }
   
+  .okButtonContainer {
+    display: inline-block; 
+    margin-top: 10px;
+  }
+  
+  .okButton {
+    background-color: #4caf50; 
+    border: none; 
+    color: white;
+    padding: 10px 20px; 
+    text-align: center; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    /* width: 50px;
+    height: 40px; */
+  }
+
   .scrollViewContent {
     height: 200px; /* adjust the height as needed */
     overflow-y: scroll;
@@ -130,7 +161,10 @@
   .rowContainer {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: row;
     margin-bottom: 10px;
+
   }
   
   .inputText {
@@ -145,25 +179,34 @@
   }
   
   .gradeInput {
-    width: 70px;
+    width: "50%";
+    height: 30px;
+    margin-right: 20px;
   }
   
   .creditInput {
-    width: 30px;
+    width: "50%";
+    height: 30px;
+  }
+
+  .gpaButtonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .viewGpaButton {
     margin-top: 30px;
     padding: 10px 20px;
     border: none;
-    background-color: #4CAF50;
+    background-color: #055207;
     color: white;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
   }
   
   .buttonText {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
   }
   
@@ -171,4 +214,6 @@
     margin-top: 20px;
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
   }
+  
