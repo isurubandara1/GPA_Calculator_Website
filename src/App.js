@@ -115,6 +115,9 @@ const App = () => {
           program
         </p>
       </div>
+      <div className="gradeTopicContainer">
+        <p className='gradeTopic'>1. Add Grade Points According to Grades</p>
+      </div>
       <div className="gpaListcontainer">
         <div className="gradeRow">
           <p className="gpaListText">A+</p>
