@@ -2,7 +2,7 @@
   color: red;
   font-size: 14px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .container {
@@ -23,7 +23,7 @@
 }
 
   .topicContainer {
-    margin-top: 50px;
+    margin-top: 10px;
   }
   
   .topic {
@@ -33,7 +33,7 @@
   }
   
   .firstSentContainer {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   
   .firstSentence {
@@ -42,7 +42,7 @@
   }
 
   .gradeTopicContainer{
-    margin-top: 50px;
+    margin-top: 10px;
   }
 
   .gradeTopic{
@@ -65,17 +65,18 @@
     margin-bottom: 10px;
     justify-content: center; 
     flex-direction: row;
-    padding: 15px;
+    padding: 10px;
   }
   
   .gpaListText {
-    margin-right: 10px;
+    margin-right: 20px;
     margin-left: 30px;
     font-size: 18px;
     font-weight: bold;
   }
   
   .gpaTextInput {
+    margin-right: 20px;
     background-color: white;
     padding: 5px 10px;
     border-radius: 5px;

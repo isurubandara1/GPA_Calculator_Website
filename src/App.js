@@ -36,35 +36,35 @@ const App = () => {
   const [button, setButton] = useState("0");
   const [showModal, setShowModal] = useState(false);
 
-
   const viewGpa = () => {
     // Check if any of the course counts are zero
-    const noCoursesEntered = Object.values(courseCounts).some(count => count === 0);
-  
+    const noCoursesEntered = Object.values(courseCounts).some(
+      (count) => count === 0
+    );
+
     if (noCoursesEntered) {
       // Display a warning message if no courses are entered
       alert("Please, You should enter values before view GPA");
-      return; 
+      return;
     }
-  
+
     // Calculate GPA if course values are entered
     let totalGradePoints = 0;
     let totalCredits = 0;
-  
+
     for (let year = 1; year <= 4; year++) {
       for (let i = 0; i < courseCounts[`year${year}`]; i++) {
         const grade = textFields[`year${year}`][i].grade;
         const credit = textFields[`year${year}`][i].credit;
-  
+
         totalGradePoints += getGradePoints(grade) * credit;
         totalCredits += credit;
       }
     }
-  
+
     const gpa = totalGradePoints / totalCredits;
     setButton(gpa.toFixed(4));
   };
-  
 
   const getGradePoints = (grade) => {
     return gradePoints[grade] ? parseFloat(gradePoints[grade]) : 0;
@@ -122,6 +122,7 @@ const App = () => {
         <div className="topicContainer">
           <h2 className="topic">GPA ESTIMATOR</h2>
         </div>
+        <div className="gpaListcontainer">
         <div className="firstSentContainer">
           <p className="firstSentence">
             You can enter your results and see GPA according to your degree
@@ -131,117 +132,161 @@ const App = () => {
         <div className="gradeTopicContainer">
           <p className="gradeTopic">1. Add Grade Points According to Grades</p>
         </div>
-        <div className="gpaListcontainer">
-          <div className="gradeRow">
-            <p className="gpaListText">A+</p>
-            <input
-              className="gpaTextInput"
-              autoFocus="true"
-              onChange={(e) =>
-                setGradePoints({ ...gradePoints, A_plus: e.target.value })
-              }
-            />
-            <p className="gpaListText">A</p>
-            <input
-              className="gpaTextInput"
-              onChange={(e) =>
-                setGradePoints({ ...gradePoints, A: e.target.value })
-              }
-            />
-          </div>
-          <div className="gradeRow">
-            <p className="gpaListText">A-</p>
-            <input
-              className="gpaTextInput"
-              onChange={(e) =>
-                setGradePoints({ ...gradePoints, A_: e.target.value })
-              }
-            />
-            <p className="gpaListText">B+</p>
-            <input
-              className="gpaTextInput"
-              onChange={(e) =>
-                setGradePoints({ ...gradePoints, B_plus: e.target.value })
-              }
-            />
-          </div>
-          <div className="gradeRow">
-            <p className="gpaListText">B </p>
-            <input
-              className="gpaTextInput"
-              onChange={(e) =>
-                setGradePoints({ ...gradePoints, B: e.target.value })
-              }
-            />
-            <p className="gpaListText">B-</p>
-            <input
-              className="gpaTextInput"
-              onChange={(e) =>
-                setGradePoints({ ...gradePoints, B_: e.target.value })
-              }
-            />
-          </div>
-          <div className="gradeRow">
-            <p className="gpaListText">C+</p>
-            <input
-              className="gpaTextInput"
-              onChange={(e) =>
-                setGradePoints({ ...gradePoints, C_plus: e.target.value })
-              }
-            />
-            <p className="gpaListText">C </p>
-            <input
-              className="gpaTextInput"
-              onChange={(e) =>
-                setGradePoints({ ...gradePoints, C: e.target.value })
-              }
-            />
-          </div>
-          <div className="gradeRow">
-            <p className="gpaListText">C- </p>
-            <input
-              className="gpaTextInput"
-              onChange={(e) =>
-                setGradePoints({ ...gradePoints, C_: e.target.value })
-              }
-            />
-            <p className="gpaListText">D+</p>
-            <input
-              className="gpaTextInput"
-              onChange={(e) =>
-                setGradePoints({ ...gradePoints, D_plus: e.target.value })
-              }
-            />
-          </div>
-          <div className="gradeRow">
-            <p className="gpaListText">D </p>
-            <input
-              className="gpaTextInput"
-              onChange={(e) =>
-                setGradePoints({ ...gradePoints, D: e.target.value })
-              }
-            />
-            <p className="gpaListText">D-</p>
-            <input
-              className="gpaTextInput"
-              onChange={(e) =>
-                setGradePoints({ ...gradePoints, D_: e.target.value })
-              }
-            />
-          </div>
-          <div className="gradeRow">
-            <p className="gpaListText">E</p>
-            <input
-              className="gpaTextInput"
-              onChange={(e) =>
-                setGradePoints({ ...gradePoints, E: e.target.value })
-              }
-            />
-          </div>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <p className="gpaListText">A+</p>
+                </td>
+                <td>
+                  <input
+                    className="gpaTextInput"
+                    autoFocus="true"
+                    onChange={(e) =>
+                      setGradePoints({ ...gradePoints, A_plus: e.target.value })
+                    }
+                  />
+                </td>
+                <td>
+                  <p className="gpaListText">A</p>
+                </td>
+                <td>
+                  <input
+                    className="gpaTextInput"
+                    onChange={(e) =>
+                      setGradePoints({ ...gradePoints, A: e.target.value })
+                    }
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p className="gpaListText">A-</p>
+                </td>
+                <td>
+                  <input
+                    className="gpaTextInput"
+                    onChange={(e) =>
+                      setGradePoints({ ...gradePoints, A_: e.target.value })
+                    }
+                  />
+                </td>
+                <td>
+                  <p className="gpaListText">B+</p>
+                </td>
+                <td>
+                  <input
+                    className="gpaTextInput"
+                    onChange={(e) =>
+                      setGradePoints({ ...gradePoints, B_plus: e.target.value })
+                    }
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p className="gpaListText">B-</p>
+                </td>
+                <td>
+                  <input
+                    className="gpaTextInput"
+                    onChange={(e) =>
+                      setGradePoints({ ...gradePoints, B_: e.target.value })
+                    }
+                  />
+                </td>
+                <td>
+                  <p className="gpaListText">C+</p>
+                </td>
+                <td>
+                  <input
+                    className="gpaTextInput"
+                    onChange={(e) =>
+                      setGradePoints({ ...gradePoints, C_plus: e.target.value })
+                    }
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p className="gpaListText">C</p>
+                </td>
+                <td>
+                  <input
+                    className="gpaTextInput"
+                    onChange={(e) =>
+                      setGradePoints({ ...gradePoints, C: e.target.value })
+                    }
+                  />
+                </td>
+                <td>
+                  <p className="gpaListText">C-</p>
+                </td>
+                <td>
+                  <input
+                    className="gpaTextInput"
+                    onChange={(e) =>
+                      setGradePoints({ ...gradePoints, C_: e.target.value })
+                    }
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p className="gpaListText">D+</p>
+                </td>
+                <td>
+                  <input
+                    className="gpaTextInput"
+                    onChange={(e) =>
+                      setGradePoints({ ...gradePoints, D_plus: e.target.value })
+                    }
+                  />
+                </td>
+                <td>
+                  <p className="gpaListText">D</p>
+                </td>
+                <td>
+                  <input
+                    className="gpaTextInput"
+                    onChange={(e) =>
+                      setGradePoints({ ...gradePoints, D: e.target.value })
+                    }
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p className="gpaListText">D-</p>
+                </td>
+                <td>
+                  <input
+                    className="gpaTextInput"
+                    onChange={(e) =>
+                      setGradePoints({ ...gradePoints, D_: e.target.value })
+                    }
+                  />
+                </td>
+                <td>
+                  <p className="gpaListText">E</p>
+                </td>
+                <td>
+                  <input
+                    className="gpaTextInput"
+                    onChange={(e) =>
+                      setGradePoints({ ...gradePoints, E: e.target.value })
+                    }
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+
         <div className="yearTopicContainer">
           <p className="yearTopic">
-            2. Enter the number of courses in the text fields below and click the OK button for the respective  year
+            2. Enter the number of courses in the text fields below and click
+            the OK button for the respective year
           </p>
         </div>
 
@@ -258,11 +303,14 @@ const App = () => {
                   onChange={(e) =>
                     handleCountChange(`year${year}`, e.target.value)
                   }
-                  min="0" 
-                  max="100" 
+                  min="0"
+                  max="100"
                 />
                 <div className="okButtonContainer">
-                  <button className="okButton" onClick={() => handleOkPress(`year${year}`)}>
+                  <button
+                    className="okButton"
+                    onClick={() => handleOkPress(`year${year}`)}
+                  >
                     OK
                   </button>
                 </div>
@@ -271,7 +319,8 @@ const App = () => {
                 <div className="scrollViewContent">
                   {textFields[`year${year}`]?.map((course, index) => (
                     <div key={index} className="rowContainer">
-                      <input className="gradeInput"
+                      <input
+                        className="gradeInput"
                         type="text"
                         autoFocus={index === 0}
                         placeholder={`Course ${index + 1} Grade`}
@@ -283,7 +332,8 @@ const App = () => {
                           )
                         }
                       />
-                      <input className="creditInput"
+                      <input
+                        className="creditInput"
                         type="number"
                         placeholder={`Course ${index + 1} Credit`}
                         onChange={(e) =>
@@ -302,9 +352,9 @@ const App = () => {
           ))}
         </div>
         <div className="gpaButtonContainer">
-        <button className="viewGpaButton" onClick={viewGpa}>
-          <p className="buttonText">View GPA</p>
-        </button>
+          <button className="viewGpaButton" onClick={viewGpa}>
+            <p className="buttonText">View GPA</p>
+          </button>
         </div>
         <p className="gpaText">Your GPA is {button}</p>
       </div>
