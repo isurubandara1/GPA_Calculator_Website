@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import oneImage from './assets/4.jpg'
 
 const App = () => {
   const [gradePoints, setGradePoints] = useState({
@@ -43,7 +44,6 @@ const App = () => {
     );
 
     if (noCoursesEntered) {
-      // Display a warning message if no courses are entered
       alert("Please, You should enter values before view GPA");
       return;
     }
@@ -358,7 +358,7 @@ const App = () => {
         </div>
         <p className="gpaText">Your GPA is {button}</p>
       </div>
-      <div className="container2">Container 2</div>
+      <div className="container2"><img className="rightImage"src={oneImage} alt="Image 1" /></div>
     </div>
   );
 };
