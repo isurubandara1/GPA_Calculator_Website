@@ -44,7 +44,6 @@ const App = () => {
     );
 
     if (noCoursesEntered) {
-      // Display a warning message if no courses are entered
       alert("Please, You should enter values before view GPA");
       return;
     }
