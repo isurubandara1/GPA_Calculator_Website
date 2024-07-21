@@ -2,6 +2,8 @@
 
 Welcome to the Student GPA ESTIMATOR! This web application allows students to view their GPA values conveniently through a user-friendly interface.
 
+![Screenshot (227)](https://github.com/user-attachments/assets/e39d4d9e-3274-4de6-97c8-31040dd364c0)
+
 ## Features
 - **GPA Display**: Display of GPA values for each subject or course, providing students with a clear overview of their academic performance.
 - **User-Friendly Interface**: Intuitive design for easy navigation and seamless user experience.
